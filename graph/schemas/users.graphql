@@ -1,0 +1,37 @@
+"The `User` type defines the queryable fields for every user in our data source."
+type User {
+  id: Int!
+  full_name: String!
+  email: String!
+  role: Role!
+  gender: Gender!
+  identification_type: IdentificationType!
+  identification_number: String!
+  country_code: String!
+  phone_number: String!
+  ocupation: String!
+  weight: Float
+  height: Float
+  birthday: Time
+  profile_img_url: String
+  created_at: Time!
+	updated_at: Time!
+  deleted_at: Time
+}
+
+"The `UserInput` input type is used to create and update users."
+input UserInput {
+  full_name: String!
+  email: String!
+  password: String!
+  gender: Gender!
+  identification_type: IdentificationType!
+  identification_number: String!
+  country_code: String!
+  phone_number: String!
+  ocupation: String!
+  weight: Float
+  height: Float
+  birthday: Time
+  profile_img: Upload
+}

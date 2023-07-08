@@ -1,0 +1,21 @@
+# GraphQL enums schema
+
+enum Role {
+  Owner
+  Payer
+  Operator
+  Driver
+}
+
+enum Gender {
+  Male
+  Famele
+  None
+}
+
+enum IdentificationType {
+  V
+  E
+  P
+  J
+}

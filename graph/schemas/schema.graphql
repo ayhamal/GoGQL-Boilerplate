@@ -1,0 +1,39 @@
+# GraphQL schema definitions
+
+# Root types
+type Query {
+  """
+	This query allows user to login on platform.
+	"""
+  login(email: String!, password: String!): AuthData!
+  """
+  This query allows user to get their personal information.
+  """
+  me: User!
+  """
+  This query allows user to get all the messages.
+  """
+  messages: [Message!]
+}
+
+type Mutation {
+  """
+  This mutation allows user to create a new user.
+  """
+  createUser(userInput: UserInput!): AuthData!
+  """
+  This mutation allows user to reset password.
+  """
+  resetPassword(email: String!): Boolean!
+  """
+  This mutation allows user to post a message.
+  """
+  postMessage(user: String!, content: String!): ID!
+}
+
+type Subscription {
+  """
+  This subscription allows user to get all the messages in real time.
+  """
+  messages: [Message!]
+}

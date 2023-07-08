@@ -1,0 +1,7 @@
+# GraphQL scalars schema
+
+"The `Time` scalar type represents a datetime string."
+scalar Time
+
+"The `Upload` scalar type represents a multipart file upload."
+scalar Upload
